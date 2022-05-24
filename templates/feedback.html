@@ -1,0 +1,35 @@
+{% extends 'base.template.html' %}
+
+{% block content %}
+<h1>Feedback</h1>
+<form method="POST">
+    <div class="mt-3">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="fullname"/>
+    </div>
+    <div class="mt-3">
+        <label>Email</label>
+        <input type="text" class="form-control" name="email"/>
+    </div>
+    <div class="mt-3">
+        <label>Select the kind of feedback</label>
+        <input type="radio" name="feedback_type" value="complaint" checked/>
+        <label>Complaint</label>
+        <input type="radio" name="feedback_type" value="suggestion"/>
+        <label>Suggestion</label>
+        <input type="radio" name="feedback_type" value="commendation"/>
+        <label>Commendation</label>
+    </div>
+    <div class="mt-3">
+        <label>How did you hear about us?</label>
+        <input type="checkbox" name="hear_about" value="social-media"/>
+        <label>Social Media</label>
+        <input type="checkbox" name="hear_about" value="word-of-mouth"/>
+        <label>Word of Mouth</label>
+        <input type="checkbox" name="hear_about" value="ad"/>
+        <label>Advertisement</label>
+    </div>
+    <input type="submit" class="btn btn-primary mt-3"/>
+    
+</form>
+{% endblock %}

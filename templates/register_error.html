@@ -1,0 +1,11 @@
+{% extends 'base.template.html' %}
+
+{% block content %}
+<div class="alert alert-danger">
+    Sorry, we are unable to create a new account because
+    of the following issues:
+    <ul>
+        <li>{{error_msg}}</li>
+    </ul>
+</div>
+{% endblock %}

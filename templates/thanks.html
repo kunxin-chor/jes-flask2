@@ -1,0 +1,22 @@
+{% extends 'base.template.html' %}
+
+{% block content %}
+<h1>Thank you {{fullname}} for your feedback</h1>
+
+<p>We will get back to you asap to your email - {{email}}</p>
+<ul>
+    <li>Feedback type:
+        {% if feedback_type == 'complaint' %}Complaint{% endif %}
+        {% if feedback_type == 'suggestion' %}Suggestion{% endif %}
+        {% if feedback_type == 'commendation' %}Commendation {% endif %}
+    </li>
+    <li>Hear About: 
+
+        {% for h in hear_about %}
+            <span class="badge bg-primary">{{h}}</span>
+        {% endfor %}
+
+    </li>
+</ul>
+{% endblock %}
+
